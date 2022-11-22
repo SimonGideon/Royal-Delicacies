@@ -8,7 +8,7 @@ const show = (arr) => {
           <div>
             ${meal.strCategory} ${meal.idCategory}
             <div>
-              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-heart like"></i>
               5 likes
             </div>
           </div>
