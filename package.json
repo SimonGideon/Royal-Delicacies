@@ -47,5 +47,5 @@
   "dependencies": {
     "babe": "^0.0.1"
   },
-  "description": ""
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet) <img src=\"https://webpack.js.org/site-logo.1fcab817090e78435061.svg\"  width=80>"
 }
