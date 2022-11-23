@@ -1,1 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+* {
+    margin: 0;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 5rem;
+    height: 5rem;
+    align-items: center;
+}
+
+.food-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+}
+
+.food-cards img {
+    width: 75%;
+}
+
+.individuals {
+    border-radius: 7px;
+    text-align: center;
+    padding: 10%;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.description {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    
+}
+#countfood {
+    background-color:  #FF7433;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 10px;
+    align-items: center;
+    color: white;
+}
+
+button {
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.like {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.liked {
+    background-color: #FF7433;
+}
