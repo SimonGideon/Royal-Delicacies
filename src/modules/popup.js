@@ -1,7 +1,8 @@
+import CommentsApi from './comments-api.js';
 import Api from './food-details-api.js';
 
 const api = new Api();
-const clickToPopUp = document.querySelectorAll('.meal');
+const clickToPopUp = document.querySelectorAll('.comment');
 
 clickToPopUp.forEach((meal) => {
   meal.addEventListener('click', () => {
@@ -55,6 +56,46 @@ clickToPopUp.forEach((meal) => {
     foodDetails.appendChild(details);
     foodDetails.appendChild(foodName);
 
+    const commentDiv = document.createElement('div');
+    commentDiv.className = 'comment-container';
+
+    const comment = document.createElement('h2');
+    comment.className = 'comment-text';
+
+    const comments = new CommentsApi();
+    const sortedDates = comments.result.reverse((a, b) => a.date - b.date);
+    sortedDates.forEach((element) => {
+      const commentDetails = document.createElement('span');
+      commentDetails.className = 'comment-details';
+      commentDetails.innerHTML = `${element.date} ${element.username}: ${element.comment}`;
+      commentDiv.appendChild(commentDetails);
+    });
+    commentDiv.appendChild(comment);
+
+    const addCommentDiv = document.createElement('div');
+    addCommentDiv.className = 'add-comment';
+    const addCommnet = document.createElement('h2');
+    addCommnet.className = 'add-comment-text';
+
+    const inputName = document.createElement('input');
+    inputName.className = 'name';
+    inputName.setAttribute('type', 'text');
+    inputName.setAttribute('placeholder', 'Your name');
+
+    const inputInsights = document.createElement('input');
+    inputInsights.className = 'insights';
+    inputInsights.setAttribute('type', 'text');
+    inputInsights.setAttribute('placeholder', 'Your insights');
+
+    const commentButton = document.createElement('button');
+    commentButton.className = 'btn';
+    addCommentDiv.appendChild(commentButton);
+    addCommentDiv.appendChild(inputInsights);
+    addCommentDiv.appendChild(inputName);
+    addCommentDiv.appendChild(addCommnet);
+
+    popUpDiv.appendChild(addCommentDiv);
+    popUpDiv.appendChild(commentDiv);
     popUpDiv.appendChild(foodDetails);
     popUpDiv.appendChild(foodDetails);
     popUpDiv.appendChild(imgAndIconDiv);
