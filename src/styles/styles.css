@@ -53,3 +53,17 @@ button {
     padding: 5px;
     cursor: pointer;
 }
+
+#articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.like {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.liked {
+    background-color: #FF7433;
+}

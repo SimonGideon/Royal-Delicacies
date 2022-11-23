@@ -5,11 +5,11 @@ const show = (arr) => {
     html += `
     <div class="individuals">
           <img src="${meal.strCategoryThumb}" alt="foodpad">
-          <div>
+          <div id="articles">
             ${meal.strCategory} ${meal.idCategory}
-            <div>
-              <i class="fa-solid fa-heart like"></i>
-              5 likes
+            <div class="like">
+              <i class="fa-solid fa-heart liked"></i>
+              <span>5 likes</span>
             </div>
           </div>
           <button id="comment">Comments</button>
