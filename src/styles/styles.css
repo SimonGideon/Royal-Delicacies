@@ -55,15 +55,22 @@ button {
 }
 
 #articles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .like {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
+   display: flex;
+   flex-direction: column;
 }
 
-.liked {
-    background-color: #FF7433;
+.fa-heart {
+    font-size: 1.5rem;
+    color: #FF7433;
+}
+
+header {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    margin-bottom: 2rem;
 }

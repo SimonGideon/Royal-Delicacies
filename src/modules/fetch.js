@@ -1,6 +1,6 @@
 import show from './show_meals.js';
 /* eslint-disable camelcase */
-// hold our api in a constant
+// eslint-disable-next-line import/no-mutable-exports
 let array = [];
 const getData = async () => {
   // try to catch some errors
@@ -20,4 +20,4 @@ const getData = async () => {
   }
 };
 
-export default getData;
+export { getData, array };
