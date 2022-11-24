@@ -7,9 +7,13 @@ const show = (arr) => {
     response.forEach((data) => {
       const likeItem = ProductList.querySelector(`div[id="${data.item_id}"]`);
       const li = likeItem.querySelector('#n-likes');
-      li.innerHTML = `${data.likes} Likes`;
+      if (`${data.likes}` >= 2) { li.innerHTML = `${data.likes} ` + 'Likes'; } else {
+        li.innerHTML = `${data.likes} ` + 'Like';
+      }
     });
   };
+
+
   let html = '';
   // eslint-disable-next-line no-restricted-syntax
   for (const meal of arr) {

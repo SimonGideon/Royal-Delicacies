@@ -74,3 +74,26 @@ header {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
     margin-bottom: 2rem;
 }
+
+li button {
+    transition: transform .2s;
+}
+
+li:hover {
+    color: #FF7433;
+    font-size: large;
+    font-weight: 200;
+    cursor: pointer;
+    transform: scale(1)
+}
+button {
+    background-color: transparent;
+    border-color: #FF7433;
+    border: 1px solid #FF7433;
+    border-radius: 15px;
+    padding: 10px;
+}
+button:hover{
+    background-color: #FF7433;
+    color: white;
+}
