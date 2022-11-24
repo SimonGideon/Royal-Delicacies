@@ -97,3 +97,13 @@ button:hover{
     background-color: #FF7433;
     color: white;
 }
+
+input {
+    border: 1px solid #FF7433;
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+.searchButton {
+    padding: 9px !important;
+    font-size: 12px;
+}

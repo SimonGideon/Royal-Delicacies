@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-concat */
 const show = (arr) => {
   const ProductList = document.querySelector('#meals-content');
   const fetchLikes = async () => {
@@ -12,7 +13,6 @@ const show = (arr) => {
       }
     });
   };
-
 
   let html = '';
   // eslint-disable-next-line no-restricted-syntax
@@ -32,8 +32,9 @@ const show = (arr) => {
      </div>
         `;
   }
-  fetchLikes();
+
   const mainContent = document.getElementById('meals-content');
   mainContent.innerHTML = html;
+  fetchLikes();
 };
 export default show;
