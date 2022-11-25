@@ -1,15 +1,19 @@
+/* eslint-disable no-useless-concat */
+import fetchLikes from './newLike.js';
+
 const show = (arr) => {
+  fetchLikes();
   let html = '';
   // eslint-disable-next-line no-restricted-syntax
   for (const meal of arr) {
     html += `
-    <div class="individuals">
+    <div id="${meal.idCategory}" class="individuals">
           <img src="${meal.strCategoryThumb}" alt="foodpad">
           <div id="articles">
-            ${meal.strCategory} ${meal.idCategory}
+            ${meal.strCategory}
             <div class="like">
               <i class="fa-solid fa-heart liked"></i>
-              <span>5 likes</span>
+              <span id="n-likes">0 </span>
             </div>
           </div>
           <button id="comment">Comments</button>
@@ -20,5 +24,6 @@ const show = (arr) => {
 
   const mainContent = document.getElementById('meals-content');
   mainContent.innerHTML = html;
+  fetchLikes();
 };
 export default show;
