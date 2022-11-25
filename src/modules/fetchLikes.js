@@ -6,7 +6,7 @@ const likedMeal = async (id) => {
   // eslint-disable-next-line no-useless-catch
   try {
     const resp = await fetch(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o8FdGibCYqeybnMSFY1p/likes/',
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps//likes/',
       {
         method: 'POST',
         body: JSON.stringify({
