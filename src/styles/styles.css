@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
 * {
     margin: 0;
+}
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,9 +15,16 @@ nav {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 5rem;
+    /* gap: 5rem; */
     height: 5rem;
     align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 4em;
 }
 
 .food-cards {
@@ -32,6 +42,11 @@ nav {
     text-align: center;
     padding: 10%;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    transition: transform .2s;
+}
+
+.individuals:hover {
+    transform: scale(1.04)
 }
 
 .description {
@@ -103,7 +118,23 @@ input {
     padding: 0.5rem;
     border-radius: 15px;
 }
+
 .searchButton {
     padding: 9px !important;
     font-size: 12px;
+}
+
+#logos {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+    color: #FF7433;
+    font-size: 2rem !important;
+    
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid gray;
+    margin-top: 3rem;
 }
