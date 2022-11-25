@@ -86,30 +86,35 @@ button {
 .popup-container {
   width: 80%;
   height: 830px;
-  border: 1px solid black;
+  border-radius: 17px;
   overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: aliceblue;
 }
 
 .img-and-icon {
   width: 100%;
   padding-top: 50px;
-  background-color: aqua;
   display: flex;
   justify-content: center;
 }
 
 .img-container {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #ff7433;
 }
 
 .icon {
   width: 40px;
   height: 40px;
-  background-image: url(images/close-icon.png);
+  margin-left: 28%;
+  margin-top: -30px;
+  background-image: url(images/cross.png);
   background-size: 40px 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: fixed;
 }
 
 .food-details {
@@ -117,20 +122,12 @@ button {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  background-color: greenyellow;
 }
 
 .food-name {
   display: flex;
   justify-content: center;
-}
-
-.add-comment {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
+  font-size: 20px;
 }
 
 .comment-container {
@@ -138,23 +135,23 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ff7433;
 }
 
 .comment-text {
   width: 100%;
-  padding-left: 10px;
-  background-color: antiquewhite;
+  display: flex;
+  padding-left: 20px;
+  font-size: 30px;
 }
 
 .comments-container {
   width: 100%;
-  background-color: aqua;
   font-size: 17px;
   display: flex;
   flex-direction: column;
   padding: 5px;
-  margin-top: 30px;
+  margin-top: 10px;
+  padding-left: 30px;
 }
 
 .comment-details {
@@ -165,10 +162,10 @@ button {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-left: 5px;
-  border: 1px solid grey;
+  padding: 5px 10px;
+  border: 1px solid #ff7433;
   border-radius: 8px;
-  background-color: rgb(228, 228, 228);
+  background-color: white;
 }
 
 .date {
@@ -178,4 +175,64 @@ button {
   font-weight: 100;
   padding-right: 5px;
   align-self: flex-end;
+}
+
+.add-comment {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.add-comment-text {
+  font-size: 30px;
+}
+
+.input-name {
+  width: 60%;
+  height: 35px;
+  margin-left: 30px;
+  border: 1px solid #ff7433;
+  border-radius: 6px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.input-insights {
+  width: 59.4%;
+  height: 100px;
+  margin-left: 30px;
+  border: 1px solid #ff7433;
+  border-radius: 6px;
+  outline: none;
+  padding: 8px 10px;
+}
+
+.add-comment-btn {
+  width: 100px;
+  margin-left: 30px;
+  border-color: #ff7433;
+  border: 1px solid #ff7433;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: white;
+}
+
+.add-comment-btn:hover {
+  background-color: #ff7433;
+  color: white;
+}
+
+.total-comment {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: rgb(251, 243, 243);
+  background-color: rgb(241, 86, 39);
 }

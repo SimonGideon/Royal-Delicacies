@@ -52,10 +52,18 @@ const popUp = {
         comment.className = 'comment-text';
         comment.innerHTML = 'Comments';
 
+        const totalComments = (comments) => {
+          const totalComment = document.createElement('div');
+          totalComment.className = 'total-comment';
+          totalComment.innerHTML = `${comments}`;
+          comment.appendChild(totalComment);
+        };
+
+        commentDiv.appendChild(comment);
+
         const commentContainer = document.createElement('div');
         commentContainer.className = 'comments-container';
 
-        commentDiv.appendChild(comment);
         popUpDiv.appendChild(commentDiv);
 
         const addCommentDiv = document.createElement('div');
@@ -66,42 +74,46 @@ const popUp = {
         addCommentDiv.appendChild(addCommnet);
 
         const inputName = document.createElement('input');
-        inputName.className = 'name';
+        inputName.className = 'input-name';
         inputName.setAttribute('type', 'text');
         inputName.setAttribute('placeholder', 'Your name');
+        inputName.setAttribute('required', '');
         addCommentDiv.appendChild(inputName);
 
         const inputInsights = document.createElement('textarea');
-        inputInsights.className = 'insights';
+        inputInsights.className = 'input-insights';
         inputInsights.setAttribute('type', 'text');
         inputInsights.setAttribute('placeholder', 'Your insights');
+        inputInsights.setAttribute('required', '');
         addCommentDiv.appendChild(inputInsights);
 
         const commentButton = document.createElement('button');
         commentButton.innerHTML = 'Comment';
-        commentButton.className = 'btn';
+        commentButton.className = 'add-comment-btn';
         addCommentDiv.appendChild(commentButton);
 
         popUpDiv.appendChild(addCommentDiv);
+
         popup.appendChild(popUpDiv);
 
         const renderComments = async () => {
           commentContainer.innerHTML = '';
           const comments = new CommentsApi();
           const data = await comments.get(id);
+
           const sortedDates = data.sort(
             (a, b) => b.creation_date - a.creation_date,
           );
           sortedDates.forEach((element) => {
             const name = document.createElement('h3');
             name.className = 'name';
-            name.innerHTML = `👤${element.username}`;
+            name.innerHTML = `🧑🏻 ${element.username}`;
             commentContainer.appendChild(name);
             const commentDetails = document.createElement('span');
             commentDetails.className = 'comment-details';
             const comment = document.createElement('p');
             comment.className = 'comment';
-            comment.innerHTML = `🗣${element.comment}`;
+            comment.innerHTML = `${element.comment}`;
             commentDetails.appendChild(comment);
             const commentDate = document.createElement('span');
             commentDate.className = 'date';
@@ -110,20 +122,26 @@ const popUp = {
             commentContainer.appendChild(commentDetails);
             commentDiv.appendChild(commentContainer);
           });
+          totalComments(data.length);
         };
+
         renderComments();
 
-        const addComment = async (e) => {
-          e.preventDefault();
+        const addComment = async () => {
           const userValue = inputName.value;
           const insightsValue = inputInsights.value;
           const itemId = id;
-          const newComment = new Comment(itemId, userValue, insightsValue);
-          const commentsApi = new CommentsApi();
-          inputName.value = '';
-          inputInsights.value = '';
-          await commentsApi.post(newComment);
-          renderComments();
+          if (userValue === '' || insightsValue === '') {
+            inputName.setAttribute('placeholder', 'Your name is required');
+            inputInsights.setAttribute('placeholder', 'insghts required');
+          } else {
+            const newComment = new Comment(itemId, userValue, insightsValue);
+            const commentsApi = new CommentsApi();
+            inputName.value = '';
+            inputInsights.value = '';
+            await commentsApi.post(newComment);
+            renderComments();
+          }
         };
         commentButton.addEventListener('click', addComment);
 
