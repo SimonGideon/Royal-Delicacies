@@ -44,7 +44,8 @@ ul {
   border-radius: 7px;
   text-align: center;
   padding: 10%;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0,
+  box-shadow:
+    rgba(136, 165, 191, 0.48) 6px 2px 16px 0,
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
   transition: transform 0.2s;
 }
@@ -145,7 +146,8 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .individuals{
+
+  .individuals {
     width: 70%;
     margin: auto;
   }
@@ -155,11 +157,10 @@ footer {
   }
 
   #logos {
-    font-size: 1rem !important;    
+    font-size: 1rem !important;
   }
 
   ul {
     gap: 1px;
   }
-
 }
