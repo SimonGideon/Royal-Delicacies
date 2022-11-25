@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "start": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
@@ -34,6 +34,8 @@
     "html-plugin": "^0.1.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
+    "jest-fetch-mock": "^3.0.3",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",

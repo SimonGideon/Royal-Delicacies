@@ -1,12 +1,14 @@
 /* eslint-disable camelcase */
 /* eslint-disable no-unused-vars */
 import fetchLikes from './newLike.js';
+import API_KEY from './apiKey.js';
 
+const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${API_KEY}/likes/`;
 const ProductList = document.querySelector('#meals-content');
 const likedMeal = async (id) => {
   try {
     const resp = await fetch(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o8FdGibCYqeybnMSFY1p/likes/',
+      url,
       {
         method: 'POST',
         body: JSON.stringify({
@@ -29,4 +31,4 @@ ProductList.addEventListener('click', (e) => {
     fetchLikes(id);
   }
 });
-export default likedMeal;
+export { likedMeal, url };
