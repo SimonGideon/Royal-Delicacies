@@ -1,6 +1,7 @@
-/* eslint-disable no-undef */
 /* eslint-disable camelcase */
 /* eslint-disable no-unused-vars */
+import fetchLikes from './newLike.js';
+
 const ProductList = document.querySelector('#meals-content');
 const likedMeal = async (id) => {
   try {
@@ -15,8 +16,7 @@ const likedMeal = async (id) => {
           'Content-type': 'application/json; charset=UTF-8',
         },
       },
-    );
-    const respn = await resp.json();
+    ).then(() => fetchLikes());
   } catch (err) {
     console.log(err);
   }
@@ -26,6 +26,7 @@ ProductList.addEventListener('click', (e) => {
   if (element.classList.contains('fa-heart')) {
     const id = element.parentElement.parentElement.parentElement.getAttribute('id');
     likedMeal(id);
+    fetchLikes(id);
   }
 });
 export default likedMeal;
