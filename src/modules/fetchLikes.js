@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable camelcase */
 /* eslint-disable no-unused-vars */
 import fetchLikes from './newLike.js';
@@ -20,7 +21,7 @@ const likedMeal = async (id) => {
       },
     ).then(() => fetchLikes());
   } catch (err) {
-    console.log(err);
+    return err;
   }
 };
 ProductList.addEventListener('click', (e) => {
