@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable operator-linebreak */
 import key from './api-key.js';
 
