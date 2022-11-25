@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 const ProductList = document.querySelector('#meals-content');
 const likedMeal = async (id) => {
+  // eslint-disable-next-line no-useless-catch
   try {
     const resp = await fetch(
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/o8FdGibCYqeybnMSFY1p/likes/',
@@ -18,7 +19,7 @@ const likedMeal = async (id) => {
     );
     const respn = await resp.json();
   } catch (err) {
-    console.log(err);
+    throw err;
   }
 };
 ProductList.addEventListener('click', (e) => {
