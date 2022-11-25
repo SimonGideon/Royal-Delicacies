@@ -1,4 +1,5 @@
 import show from './show_meals.js';
+// import renderPopup from './popup.js';
 /* eslint-disable camelcase */
 // hold our api in a constant
 let array = [];
@@ -13,6 +14,7 @@ const getData = async () => {
     const data = await response.json();
     array = data.categories;
     show(array);
+    // renderPopup(array);
     foodcount.innerHTML = array.length;
   } catch (err) {
     // eslint-disable-next-line no-console

@@ -1,8 +1,11 @@
-const url =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/abc234/comments/';
+/* eslint-disable operator-linebreak */
+import key from './api-key.js';
+
+const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${key}/comments/`;
 
 class CommentsApi {
-  get = () => {
+  get = (id) => {
+    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${key}/comments?item_id=${id}`;
     const result = fetch(url, {
       method: 'GET',
     })
@@ -17,9 +20,9 @@ class CommentsApi {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        comment: comment.comment,
-        creation_date: comment.date,
+        item_id: comment.id,
         username: comment.username,
+        comment: comment.comment,
       }),
     })
       .then((res) => res.json())

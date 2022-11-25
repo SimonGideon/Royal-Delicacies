@@ -1,104 +1,141 @@
+import { mealList, popup } from './components.js';
 import CommentsApi from './comments-api.js';
-import Api from './food-details-api.js';
+import Comment from './comment.js';
 
-const api = new Api();
-const clickToPopUp = document.querySelectorAll('.comment');
+const popUp = {
+  renderPopup: (array, id) => {
+    for (let i = 0; i < array.length; i += 1) {
+      if (i === id - 1) {
+        const popUpDiv = document.createElement('div');
+        popUpDiv.className = 'popup-container';
 
-clickToPopUp.forEach((meal) => {
-  meal.addEventListener('click', () => {
-    const popUpDiv = document.createElement('div');
-    popUpDiv.className = 'popup-container';
+        const imgAndIconDiv = document.createElement('div');
+        imgAndIconDiv.className = 'img-and-icon';
 
-    const imgAndIconDiv = document.createElement('div');
-    imgAndIconDiv.className = 'img-and-icon';
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'img-container';
+        const foodImg = document.createElement('img');
+        foodImg.className = 'img';
+        foodImg.src = `${array[i].strCategoryThumb}`;
+        imgDiv.appendChild(foodImg);
+        imgAndIconDiv.appendChild(imgDiv);
 
-    const img = document.createElement('img');
-    img.className = 'meal-img';
+        const icon = document.createElement('img');
+        icon.className = 'icon';
+        imgAndIconDiv.appendChild(icon);
 
-    const icon = document.createElement('img');
-    icon.className = 'icon';
+        popUpDiv.appendChild(imgAndIconDiv);
 
-    imgAndIconDiv.appendChild(icon);
-    imgAndIconDiv.appendChild(img);
+        const foodDetails = document.createElement('div');
+        foodDetails.className = 'food-details';
 
-    const foodDetails = document.createElement('div');
-    foodDetails.className = 'food-details';
+        const foodName = document.createElement('div');
+        foodName.className = 'food-name';
 
-    const foodName = document.createElement('div');
-    foodName.className = 'food-name';
+        const name = document.createElement('h2');
+        name.className = 'name';
+        name.innerHTML = `${array[i].strCategory}`;
+        foodName.appendChild(name);
 
-    const name = document.createElement('h2');
-    name.className = 'name';
-    foodName.appendChild(name);
+        const details = document.createElement('div');
+        details.className = 'details';
 
-    const details = document.createElement('div');
-    details.className = 'details';
+        details.innerHTML = `${array[i].strCategoryDescription}`;
+        foodDetails.appendChild(foodName);
+        foodDetails.appendChild(details);
+        popUpDiv.appendChild(foodDetails);
 
-    const strCategoryDiv = document.createElement('div');
-    strCategoryDiv.className = 'str-category-container';
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment-container';
 
-    const strCategory = document.createComment('span');
-    strCategory.className = 'str-category';
-    strCategory.innerHtml = `strCategory: ${api.get.strCategory}`;
-    strCategoryDiv.appendChild(strCategory);
+        const comment = document.createElement('h2');
+        comment.className = 'comment-text';
+        comment.innerHTML = 'Comments';
 
-    const strCategoryThumb = document.createComment('span');
-    strCategoryThumb.className = 'str-category-thumb';
-    strCategoryThumb.innerHtml = `strCategoryThumb: ${api.get.strCategoryThumb}`;
-    strCategoryDiv.appendChild(strCategoryThumb);
+        const commentContainer = document.createElement('div');
+        commentContainer.className = 'comments-container';
 
-    const strCategoryDesctiption = document.createComment('span');
-    strCategoryDesctiption.className = 'str-category-description';
-    strCategoryDesctiption.innerHtml = `strCategoryDescription: ${api.get.strCategoryDesctiption}`;
-    strCategoryDiv.appendChild(strCategoryDesctiption);
+        commentDiv.appendChild(comment);
+        popUpDiv.appendChild(commentDiv);
 
-    foodDetails.appendChild(strCategoryDiv);
-    foodDetails.appendChild(details);
-    foodDetails.appendChild(foodName);
+        const addCommentDiv = document.createElement('div');
+        addCommentDiv.className = 'add-comment';
+        const addCommnet = document.createElement('h2');
+        addCommnet.innerHTML = 'Add a comment';
+        addCommnet.className = 'add-comment-text';
+        addCommentDiv.appendChild(addCommnet);
 
-    const commentDiv = document.createElement('div');
-    commentDiv.className = 'comment-container';
+        const inputName = document.createElement('input');
+        inputName.className = 'name';
+        inputName.setAttribute('type', 'text');
+        inputName.setAttribute('placeholder', 'Your name');
+        addCommentDiv.appendChild(inputName);
 
-    const comment = document.createElement('h2');
-    comment.className = 'comment-text';
+        const inputInsights = document.createElement('textarea');
+        inputInsights.className = 'insights';
+        inputInsights.setAttribute('type', 'text');
+        inputInsights.setAttribute('placeholder', 'Your insights');
+        addCommentDiv.appendChild(inputInsights);
 
-    const comments = new CommentsApi();
-    const sortedDates = comments.result.reverse((a, b) => a.date - b.date);
-    sortedDates.forEach((element) => {
-      const commentDetails = document.createElement('span');
-      commentDetails.className = 'comment-details';
-      commentDetails.innerHTML = `${element.date} ${element.username}: ${element.comment}`;
-      commentDiv.appendChild(commentDetails);
-    });
-    commentDiv.appendChild(comment);
+        const commentButton = document.createElement('button');
+        commentButton.innerHTML = 'Comment';
+        commentButton.className = 'btn';
+        addCommentDiv.appendChild(commentButton);
 
-    const addCommentDiv = document.createElement('div');
-    addCommentDiv.className = 'add-comment';
-    const addCommnet = document.createElement('h2');
-    addCommnet.className = 'add-comment-text';
+        popUpDiv.appendChild(addCommentDiv);
+        popup.appendChild(popUpDiv);
 
-    const inputName = document.createElement('input');
-    inputName.className = 'name';
-    inputName.setAttribute('type', 'text');
-    inputName.setAttribute('placeholder', 'Your name');
+        const renderComments = async () => {
+          commentContainer.innerHTML = '';
+          const comments = new CommentsApi();
+          const data = await comments.get(id);
+          const sortedDates = data.sort(
+            (a, b) => b.creation_date - a.creation_date,
+          );
+          sortedDates.forEach((element) => {
+            const name = document.createElement('h3');
+            name.className = 'name';
+            name.innerHTML = `👤${element.username}`;
+            commentContainer.appendChild(name);
+            const commentDetails = document.createElement('span');
+            commentDetails.className = 'comment-details';
+            const comment = document.createElement('p');
+            comment.className = 'comment';
+            comment.innerHTML = `🗣${element.comment}`;
+            commentDetails.appendChild(comment);
+            const commentDate = document.createElement('span');
+            commentDate.className = 'date';
+            commentDate.innerHTML = `${element.creation_date}`;
+            commentDetails.appendChild(commentDate);
+            commentContainer.appendChild(commentDetails);
+            commentDiv.appendChild(commentContainer);
+          });
+        };
+        renderComments();
 
-    const inputInsights = document.createElement('input');
-    inputInsights.className = 'insights';
-    inputInsights.setAttribute('type', 'text');
-    inputInsights.setAttribute('placeholder', 'Your insights');
+        const addComment = async (e) => {
+          e.preventDefault();
+          const userValue = inputName.value;
+          const insightsValue = inputInsights.value;
+          const itemId = id;
+          const newComment = new Comment(itemId, userValue, insightsValue);
+          const commentsApi = new CommentsApi();
+          inputName.value = '';
+          inputInsights.value = '';
+          await commentsApi.post(newComment);
+          renderComments();
+        };
+        commentButton.addEventListener('click', addComment);
 
-    const commentButton = document.createElement('button');
-    commentButton.className = 'btn';
-    addCommentDiv.appendChild(commentButton);
-    addCommentDiv.appendChild(inputInsights);
-    addCommentDiv.appendChild(inputName);
-    addCommentDiv.appendChild(addCommnet);
+        icon.addEventListener('click', () => {
+          popUpDiv.classList.add('hide');
+          mealList.classList.remove('hide');
+        });
+      }
+    }
 
-    popUpDiv.appendChild(addCommentDiv);
-    popUpDiv.appendChild(commentDiv);
-    popUpDiv.appendChild(foodDetails);
-    popUpDiv.appendChild(foodDetails);
-    popUpDiv.appendChild(imgAndIconDiv);
-    mealList.appendChild(popUpDiv);
-  });
-});
+    mealList.classList.add('hide');
+  },
+};
+
+export default popUp;
