@@ -1,32 +1,40 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 <img src="https://webpack.js.org/site-logo.1fcab817090e78435061.svg"  width=80>
+## <img src= "https://user-images.githubusercontent.com/61404403/204051430-ebb5b90f-d494-478f-88f4-39b81c7ab9af.png" width=60%>
+# Royal Meals Web App
 
-
-# webpack
-
-> Template for Webpack setup
+> This is a web app that allows the user to navigate throug different meals displayed on the page amd also to share their reactions through:
+- Like
+- Comments
 
 ## 🗼Built With
 
 - HTML
 - Javascript
-- GitHub Actions
+- Gitflow Actions
 - Webpack
+- Jest - for Unit Testing.
 
 ## Getting Started
 Clone this repository
 ```
-$ git clone https://github.com/SimonGideon/webpack.git
-$ cd Leaderboard
+$ git https://github.com/SimonGideon/javascript-group-capstone-project.git
+$ cd javascript-group-capstone-project
 ```
+Generating your own key
+> Navigate to scrc/app.js and paste 📋 the following function:
+```
+import getKey from './modules/getkey.js';
+getKey();
+```
+>check you console in the browser the key is returned as an error in the format: `u06lzZuHDEVnvjfd4K1F`
 Run Webpack
 ```
-$ npm install
-$ npm run start #this will launch the webpack
+$ npm init -y
 ```
 Open in Browser
 ```
-$ npm start #this runs the webpack and also opens on browser on default port
+$ npm run start #this will launch the webpack server
 ```
 
 *🎉Congratulations you're done*✨
