@@ -1,5 +1,6 @@
 /* eslint-disable consistent-return */
 /* eslint-disable camelcase */
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 import fetchLikes from './newLike.js';
 import API_KEY from './apiKey.js';
