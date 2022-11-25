@@ -1,4 +1,5 @@
 /* eslint-disable consistent-return */
+/* eslint-disable no-useless-concat */
 /* eslint-disable import/no-unresolved */
 import API_KEY from './apiKey.js';
 
