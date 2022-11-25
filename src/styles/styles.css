@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap");
 
 * {
   margin: 0;
@@ -44,7 +44,8 @@ ul {
   border-radius: 7px;
   text-align: center;
   padding: 10%;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0, rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
   transition: transform 0.2s;
 }
 
@@ -126,7 +127,7 @@ input {
 }
 
 #logos {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-weight: 900;
   color: #ff7433;
   font-size: 2rem !important;
@@ -137,4 +138,28 @@ footer {
   text-align: center;
   border-top: 1px solid gray;
   margin-top: 3rem;
+}
+
+@media (max-width: 475px) {
+  .food-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .individuals{
+    width: 70%;
+    margin: auto;
+  }
+
+  .searchBox {
+    display: none;
+  }
+
+  #logos {
+    font-size: 1rem !important;    
+  }
+
+  ul {
+    gap: 1px;
+  }
+
 }
