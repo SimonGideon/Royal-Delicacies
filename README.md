@@ -47,6 +47,10 @@ $ npm run start #this will launch the webpack server
 - Twitter: [@Simo_Giddy](https://twitter.com/Simo_Giddy)
 - LinkedIn: [mnayi-gideon](https://linkedin.com/in/mnayi-gideon)
 
+👤 **Zia Bakhteyari**
+- GitHub: [@zia123456](https://github.com/Zia123456)
+- Twitter: [@zia_bakhteyari](https://twitter.com/Zia_Bakhteyari)
+- LinkedIn: [Zia bakhteyari](https://www.linkedin.com/in/zia-bakhteyari-8b8a861a5/)
 
 ## 🤝 Contributing
 
@@ -59,7 +63,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Akcnowledgement
-Thank you [@SimonGideon](https://github.com/SimonGideon) for preparing this set and also making it available in for everyone
+Thank you [@SimonGideon](https://github.com/SimonGideon) and [@zia123456](https://github.com/Zia123456) for preparing this set and also making it available in for everyone
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
