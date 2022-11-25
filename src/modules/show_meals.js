@@ -32,7 +32,6 @@ const show = (arr) => {
      </div>
         `;
   }
-
   const mainContent = document.getElementById('meals-content');
   mainContent.innerHTML = html;
   fetchLikes();
