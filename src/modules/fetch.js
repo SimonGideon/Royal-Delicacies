@@ -1,4 +1,5 @@
 import show from './show_meals.js';
+// import renderPopup from './popup.js';
 /* eslint-disable camelcase */
 // eslint-disable-next-line import/no-mutable-exports
 let array = [];

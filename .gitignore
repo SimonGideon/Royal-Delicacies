@@ -1,3 +1,8 @@
 # .gitignore
 **/node_modules
 apiKey.js
+api-key.js
+<<<<<<< HEAD
+=======
+apiKey.js
+>>>>>>> 6f4d421516d825a6640edd0dd89e0c3aba3438f0

@@ -9,18 +9,15 @@ const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/
 const ProductList = document.querySelector('#meals-content');
 const likedMeal = async (id) => {
   try {
-    const resp = await fetch(
-      url,
-      {
-        method: 'POST',
-        body: JSON.stringify({
-          item_id: id,
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
+    const resp = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: id,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
       },
-    ).then(() => fetchLikes());
+    }).then(() => fetchLikes());
   } catch (err) {
     return err;
   }
@@ -28,7 +25,8 @@ const likedMeal = async (id) => {
 ProductList.addEventListener('click', (e) => {
   const element = e.target;
   if (element.classList.contains('fa-heart')) {
-    const id = element.parentElement.parentElement.parentElement.getAttribute('id');
+    const id =
+      element.parentElement.parentElement.parentElement.getAttribute('id');
     likedMeal(id);
     fetchLikes(id);
   }
