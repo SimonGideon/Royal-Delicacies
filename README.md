@@ -41,7 +41,7 @@ After you're finished please remove all the comments and instructions!
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
-  - [Introduction](https://drive.google.com/file/d/1tb8PCQn0sUOj7AtlyWrjEN5DwHaiLPqN/view?usp=sharing)
+  - [Introduction](#Introduction)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -112,6 +112,9 @@ After you're finished please remove all the comments and instructions!
 - [Live Demo Link]( https://simongideon.github.io/javascript-group-capstone-project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Introduction
+- [Watch the video](https://drive.google.com/file/d/1tb8PCQn0sUOj7AtlyWrjEN5DwHaiLPqN/view?usp=sharing)
 
 <!-- GETTING STARTED -->
 
