@@ -11,6 +11,7 @@ REQUIRED SECTIONS:
 - About the Project
   - Built With
   - Live Demo
+  - Introduction
 - Getting Started
 - Authors
 - Future Features
@@ -40,6 +41,7 @@ After you're finished please remove all the comments and instructions!
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [Introduction](https://drive.google.com/file/d/1tb8PCQn0sUOj7AtlyWrjEN5DwHaiLPqN/view?usp=sharing)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
