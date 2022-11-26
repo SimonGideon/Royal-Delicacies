@@ -1,27 +1,27 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-useless-concat */
 import fetchLikes from './newLike.js';
-
-import popUp from './popup.js';
+import { selector } from './components.js';
 
 const show = (arr) => {
   let html = '';
-  // eslint-disable-next-line no-restricted-syntax
+
   for (const meal of arr) {
     html += `
-    <div class="individuals">
-          <img src="${meal.strCategoryThumb}" alt="foodpad">
-          <div id="articles">
-            ${meal.strCategory} ${meal.idCategory}
-            <div class="like">
-              <i class="fa-solid fa-heart liked"></i>
-              <span>5 likes</span>
+      <div id="${meal.idCategory}" class="individuals">
+            <img src="${meal.strCategoryThumb}" alt="foodpad">
+            <div id="articles">
+              ${meal.strCategory}
+              <div class="like">
+                <i class="fa-solid fa-heart liked"></i>
+                <span id="n-likes">0 </span>
+              </div>
             </div>
-          </div>
-          <button id="comment">Comments</button>
-          <button id="Reservations">Reservations</button>
-     </div>
-        `;
+            <button class='${meal.idCategory}' id='comment_btn'>Comments</button>
+            <button id="Reservations">Reservations</button>
+       </div>
+          `;
   }
 
   const mainContent = document.getElementById('meals-content');

@@ -1,6 +1,6 @@
 /* @jest-environment jsdom */
 /* eslint-disable no-unused-vars */
-import fetchMock from './jest-fetch-mock';
+import fetchMock from 'jest-fetch-mock';
 import { array, menu } from '../src/modules/fetch.js';
 
 fetchMock.enableMocks();

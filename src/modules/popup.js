@@ -2,6 +2,13 @@ import { mealList, popup } from './components.js';
 import CommentsApi from './comments-api.js';
 import Comment from './comment.js';
 
+// const selector = function selectCommentBtn() {
+//   const commentBtn = document.querySelector('.comBtn');
+//   return commentBtn;
+// };
+
+// console.log(selector());
+
 const popUp = {
   renderPopup: (array, id) => {
     for (let i = 0; i < array.length; i += 1) {
@@ -52,8 +59,9 @@ const popUp = {
         comment.className = 'comment-text';
         comment.innerHTML = 'Comments';
 
+        const totalComment = document.createElement('div');
         const totalComments = (comments) => {
-          const totalComment = document.createElement('div');
+          totalComment.innerHTML = '';
           totalComment.className = 'total-comment';
           totalComment.innerHTML = `${comments}`;
           comment.appendChild(totalComment);
@@ -124,7 +132,6 @@ const popUp = {
           });
           totalComments(data.length);
         };
-
         renderComments();
 
         const addComment = async () => {

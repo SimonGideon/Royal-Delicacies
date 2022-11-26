@@ -1,4 +1,4 @@
-const commentCounter = require('./__MOCK__/comments-counter.js');
+const commentCounter = require('./comments-counter.js');
 
 test('Total number of comments must be 3', () => {
   // Arrang

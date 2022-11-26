@@ -4,7 +4,9 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 import fetchLikes from './newLike.js';
-import API_KEY from './apiKey.js';
+import { API_KEY } from './api-key.js';
+import popUp from './popup.js';
+import { array } from './fetch.js';
 
 const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${API_KEY}/likes/`;
 const ProductList = document.querySelector('#meals-content');
@@ -23,6 +25,7 @@ const likedMeal = async (id) => {
     return err;
   }
 };
+
 ProductList.addEventListener('click', (e) => {
   const element = e.target;
   if (element.classList.contains('fa-heart')) {
@@ -30,6 +33,11 @@ ProductList.addEventListener('click', (e) => {
       element.parentElement.parentElement.parentElement.getAttribute('id');
     likedMeal(id);
     fetchLikes(id);
+  } else if (element.getAttribute('id') === 'comment_btn') {
+    const id = element.parentElement.getAttribute('id');
+
+    popUp.renderPopup(array, id);
   }
 });
+
 export { likedMeal, url };

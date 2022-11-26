@@ -200,7 +200,7 @@ footer {
   height: 40px;
   margin-left: 28%;
   margin-top: -30px;
-  background-image: url(images/cross.png);
+  background-image: url(../images/cross.png);
   background-size: 40px 40px;
   border: 1px solid black;
   border-radius: 50%;
@@ -327,6 +327,25 @@ footer {
   background-color: rgb(241, 86, 39);
 }
 
+.contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(137, 227, 227);
+}
+
+.reach-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
 .hide {
   display: none;
+}
+
+.show {
+  display: block;
 }
