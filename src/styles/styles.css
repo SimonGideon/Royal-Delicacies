@@ -326,3 +326,7 @@ footer {
   color: rgb(251, 243, 243);
   background-color: rgb(241, 86, 39);
 }
+
+.hide {
+  display: none;
+}
