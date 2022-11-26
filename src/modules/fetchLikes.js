@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 /* eslint-disable consistent-return */
 /* eslint-disable camelcase */
 /* eslint-disable import/no-unresolved */
