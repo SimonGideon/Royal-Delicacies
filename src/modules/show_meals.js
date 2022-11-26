@@ -1,9 +1,4 @@
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-useless-concat */
-import fetchLikes from './newLike.js';
-import { selector } from './components.js';
-
 const show = (arr) => {
   let html = '';
 
