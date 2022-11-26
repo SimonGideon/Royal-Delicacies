@@ -1,6 +1,7 @@
 // styles
 import './styles/styles.css';
-// import fetch_data
-import getData from './modules/fetch.js';
-// show meals
+import { likedMeal } from './modules/fetchLikes.js';
+import { getData } from './modules/fetch.js';
+
 getData();
+likedMeal();

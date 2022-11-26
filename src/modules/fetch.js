@@ -1,23 +1,20 @@
 import show from './show_meals.js';
-/* eslint-disable camelcase */
-// hold our api in a constant
+// eslint-disable-next-line import/no-mutable-exports
 let array = [];
+
+const menu = () => {
+  const foodcount = document.getElementById('countfood');
+  const counted = document.querySelector('#meals-content').childElementCount;
+  foodcount.innerHTML = counted;
+};
 const getData = async () => {
-  // try to catch some errors
-  try {
-    const foodcount = document.getElementById('countfood');
-    // storing response
-    const api_url = 'https://www.themealdb.com/api/json/v1/1/categories.php';
-    const response = await fetch(api_url);
-    // convert data into json
-    const data = await response.json();
-    array = data.categories;
-    show(array);
-    foodcount.innerHTML = array.length;
-  } catch (err) {
-    // eslint-disable-next-line no-console
-    console.log(err);
-  }
+  const apiUrl = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+  const response = await fetch(apiUrl);
+
+  const data = await response.json();
+  array = data.categories;
+  show(array);
+  menu();
 };
 
-export default getData;
+export { getData, array, menu };
