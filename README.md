@@ -15,7 +15,6 @@
 - Webpack
 - Jest - for Unit Testing.
 
-
 ## Getting Started
 Clone this repository
 ```
