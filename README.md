@@ -15,7 +15,6 @@
 - Webpack
 - Jest - for Unit Testing.
 
-#### [Live link](https://simongideon.github.io/javascript-group-capstone-project/)
 
 ## Getting Started
 Clone this repository
