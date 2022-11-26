@@ -19,4 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   contactContainer.classList.add('hide');
 });
 
-export { mealList, popup, contact, contactContainer };
+export {
+  mealList, popup, contact, contactContainer,
+};

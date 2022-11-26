@@ -1,19 +1,119 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-<img src="https://webpack.js.org/site-logo.1fcab817090e78435061.svg"  width=80>
-## <img src= "https://user-images.githubusercontent.com/61404403/204051430-ebb5b90f-d494-478f-88f4-39b81c7ab9af.png" width=60%>
-# Royal Meals Web App
+<a name="readme-top"></a>
 
-> This is a web app that allows the user to navigate throug different meals displayed on the page amd also to share their reactions through:
+<!--
+HOW TO USE:
+This is an example of how you may give instructions on setting up your project locally.
+
+Modify this file to match your project and remove sections that don't apply.
+
+REQUIRED SECTIONS:
+- Table of Contents
+- About the Project
+  - Built With
+  - Live Demo
+- Getting Started
+- Authors
+- Future Features
+- Contributing
+- Show your support
+- Acknowledgements
+- License
+
+After you're finished please remove all the comments and instructions!
+-->
+
+<div align="center">
+
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>Microverse README Template</b></h3>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 [Royal Meals Web App <a name="about-project"></a>
+
+> **[Royal Meals]** is a... This is a web app that allows the user to navigate throug different meals displayed on the page amd also to share their reactions through:
 - Like
 - Comments
 
-## 🗼Built With
 
-- HTML
-- Javascript
-- Gitflow Actions
-- Webpack
-- Jest - for Unit Testing.
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+> We used the following tech stacks
+
+<details>
+  <summary>Javascript</summary>
+  <ul>
+    <li><a href="https://www.javascript.com/">React.js</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>HTML</summary>
+  <ul>
+    <li><a href="https://html.com/">Express.js</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Webpack</summary>
+  <ul>
+    <li><a href="https://www.webpack.com/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+> The Web app provides the following features
+
+- **Like involvement**
+- **Comment reactions**
+- **Food landing page**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Add a link to your deployed project.
+
+- [Live Demo Link]( https://simongideon.github.io/javascript-group-capstone-project/dist/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
 
 ## Getting Started
 Clone this repository
@@ -37,9 +137,91 @@ Open in Browser
 $ npm run start #this will launch the webpack server
 ```
 
-*🎉Congratulations you're done*✨
+### Prerequisites
 
-## Authors
+In order to run this project you need:
+
+<!--
+Example command:
+
+Generating your own key
+> Navigate to scrc/app.js and paste 📋 the following function:
+```
+import getKey from './modules/getkey.js';
+getKey();
+```
+ -->
+
+### Setup
+
+Clone this repository to your desired folder:
+
+<!--
+Example commands:
+
+>check you console in the browser the key is returned as an error in the format: `u06lzZuHDEVnvjfd4K1F`
+Run Webpack
+```
+$ npm init -y
+```
+--->
+
+### Install
+
+Install this project with:
+
+<!--
+Example command:
+
+```sh
+  cd javascript-group-capstone-project
+  $ npm install
+```
+--->
+
+### Usage
+
+To run the project, execute the following command:
+
+<!--
+Example command:
+
+```sh
+  npm run start
+```
+--->
+
+### Run tests
+
+To run tests, run the following command:
+
+<!--
+Example command:
+
+```sh
+ npm run test
+```
+--->
+
+### Deployment
+
+You can deploy this project using:
+
+<!--
+Example:
+
+```sh
+
+```
+ -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+> The following people took part in the collaboration.
 
 👤 **Simon Gideon**
 
@@ -50,7 +232,10 @@ $ npm run start #this will launch the webpack server
 👤 **Zia Bakhteyari**
 - GitHub: [@zia123456](https://github.com/Zia123456)
 - Twitter: [@zia_bakhteyari](https://twitter.com/Zia_Bakhteyari)
-- LinkedIn: [Zia bakhteyari](https://www.linkedin.com/in/zia-bakhteyari-8b8a861a5/)
+- LinkedIn: [Zia bakhteyari](https://www.linkedin.com/in/zia-bakhteyari-8b8a861a5/)edIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+*🎉Congratulations you're done*✨
 
 ## 🤝 Contributing
 
@@ -64,6 +249,15 @@ Give a ⭐️ if you like this project!
 
 ## Akcnowledgement
 Thank you [@SimonGideon](https://github.com/SimonGideon) and [@zia123456](https://github.com/Zia123456) for preparing this set and also making it available in for everyone
-## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
