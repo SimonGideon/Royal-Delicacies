@@ -232,6 +232,12 @@ Example:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## A link to your Kanban board.
+[Kanban](https://github.com/SimonGideon/javascript-group-capstone-project/projects/1)
+
+## Pull request for Review Made 
+- [Simon](https://github.com/SimonGideon/javascript-group-capstone-project/pull/28);
+
 <!-- AUTHORS -->
 
 ### Prerequisites
