@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "start": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
@@ -29,11 +29,13 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
-    "hint": "^7.1.3",
+    "hint": "^2.0.0",
     "html": "^1.0.0",
     "html-plugin": "^0.1.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
+    "jest-fetch-mock": "^3.0.3",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -47,5 +49,5 @@
   "dependencies": {
     "babe": "^0.0.1"
   },
-  "description": ""
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet) <img src=\"https://webpack.js.org/site-logo.1fcab817090e78435061.svg\"  width=80>"
 }

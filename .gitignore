@@ -1,5 +1,6 @@
 # .gitignore
 **/node_modules
+apiKey.js
 api-key.js
 <<<<<<< HEAD
 =======

@@ -4,24 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACNDYABgt/8AUqb/AEia/wBImv8ARpf/AEaX/wBGl/8ARpf/AEaX/wBDlP8AQ5T/AEOU/wAYNmAAAAAAACNDYABuyv8AkfX/E6f+/xOn/v8Rpf7/AJj9/wCE5f8AfNv/AHzb/wB82/8AZL3/AGC5/wBguf8AUqf/ABg2YABgt/8AhOX/AJj9/za8/v8jtP7/IbL+/wCY/f8AmP3/AHzb/wBx1/8AaNP/AGPO/wBguf8AYLn/AGC5/wBDlP8AXbP/AGjB/wBxzP8Accz/AHHM/wBxzP8Accz/AGfC/wBg0P9wneH/ILft/wCD5f8AVsT/AEue/wBLnv8AQJD/AF2z/wZu6v8Gbur/BTms/wUVgf8FGYX/BGfh/wBq1/8Vvff/UfD//zHt//8AtP//AIPl/wNa0f8GaeT/AECQ/wAMECACNJr/Bgh8/wMR0P8BFfj/AAmg/wCQJP8CXEL/Bgh6/wYIev8GCHz/Bgh6/wYIev8GDHX/Bgx1/wEBCxgArxj/AKUm/wE3x/8BN8f/AJgn/wCfPP8AtHf/AKZi/wBZVP8BMMn/ATDJ/wAfi/8AUF3/AJUz/wCVM/8ALQtQALMj/x7Yhv8Av0j/AL9I/wDLhv8AxoP/JOWs/wDWjf8At27/AJpC/wCaQv8AmkL/AKRd/wCrcf8Aq3H/AJIp/wBNF38AfY//AH2P/wB9j/8Aa4P/AGuD/wB9j/8AfY//AH2P/wBrg/8Aa4P/AGuD/wBrg/8Aa4P/AGuD/wBAG38AT5nfAG/L/wBvy/8Ab8v/AG/L/wBvy/8Ab8v/AG/L/wBvy/8Ab8v/AG/L/wBZsP8AWbD/AFmw/wBZsP8AOH7fAGC3/wCD5P8Al/z/AJf8/wCX/P8Al/z/AJf8/wCX/P8Al/z/AIHh/wB82/8Ae9r/AHLO/wBguf8AYLn/AEOU/wBjuv8Tp/7/Lbz+/wqg/f8KoP3/AJj9/wSb/f84xP//EaX+/wCY/f8AmP3/AHzb/wByz/8AYLn/AGC5/wBDlP8ARoa/AJT4/yu6/v9i2f//Qsz//xeq/v8In/3/AJj9/wCY/f8AmP3/AI/y/wB82/8Acs//AGC5/wBetv8AMGy/AAAAAABGhr8Aedb/CH/W/x+w/v8fsP7/EaX+/wCY/f8Alfn/AInr/wB82/8Abcn/AFOn/wBPo/8AMGy/AAAAAAAAAAAAAAAAABoySAAaMkgAZLz/AG7I/wBuyP8Absj/AF2z/wBRpf8AUaX/AESV/wASKUgAEilIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJERgACREYAAkRGAAGDhgABg4YAAYOGAAAAAAAAAAAAAAAAAAAAAAAAAAAwAMAAIABAAAAAAAAAAAAAAAAAACAAQAAAAEAAAAAAACAAQAAAAAAAAAAAAAAAAAAAAAAAIABAADwDwAA//8AAA==" rel="icon" type="image/x-icon" />
     <title>Royal Meals</title>
     <body>
     <header>
       <nav>
-        <img src="../logo.png" alt="" srcset="">
-        <li>Available foods<span id="countfood"></span></li>
-        <li>Menu</li>
-        <li>More</li>
-      </ul>
+        <h1 id="logos">Royal Meals</h1>
+        <ul>
+          <li>Available foods<span id="countfood"></span></li>
+          <li href="#" >Menu</li>
+          <li>More</li>
+        </ul>
+        <div class="searchBox">
+          <input class="searchInput"type="text" name="" placeholder="Search">
+          <button class="searchButton" href="#">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+      </div>
     </nav>
     </header>
       <div id="meals-content" class="food-cards">
       </div>
       <div class="popup-main-container"></div>
     <footer>
-        <p>Created by Microverse under CC license</p>
+        <p>&copy;2022 Created by Microverse under CC license</p>
     </footer>
-    <script src="https://kit.fontawesome.com/179b1b9f6b.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/179b1b9f6b.js" crossorigin="anonymous"></script> -->
   </body>
 </html>
