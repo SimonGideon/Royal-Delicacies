@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable operator-linebreak */
 import { key } from './api-key.js';
 
 const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${key}/comments/`;

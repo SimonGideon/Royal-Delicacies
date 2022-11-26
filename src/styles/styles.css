@@ -18,8 +18,6 @@ nav {
   display: flex;
   flex-direction: row;
   list-style: none;
-
-  /* gap: 5rem; */
   height: 5rem;
   align-items: center;
   justify-content: space-between;
@@ -340,6 +338,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  margin-top: 30px;
+  padding-bottom: 20px;
 }
 
 .hide {
