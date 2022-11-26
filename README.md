@@ -60,9 +60,9 @@ After you're finished please remove all the comments and instructions!
 # 📖 [Royal Meals Web App <a name="about-project"></a>
 
 > **[Royal Meals]** is a... This is a web app that allows the user to navigate throug different meals displayed on the page amd also to share their reactions through:
+
 - Like
 - Comments
-
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -109,11 +109,12 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link]( https://simongideon.github.io/javascript-group-capstone-project/dist/)
+- [Live Demo Link](https://simongideon.github.io/javascript-group-capstone-project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Introduction
+
 - [Watch the video](https://drive.google.com/file/d/1tb8PCQn0sUOj7AtlyWrjEN5DwHaiLPqN/view?usp=sharing)
 
 <!-- GETTING STARTED -->
@@ -121,26 +122,117 @@ After you're finished please remove all the comments and instructions!
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ## Getting Started
+
 Clone this repository
+
 ```
 $ git https://github.com/SimonGideon/javascript-group-capstone-project.git
 $ cd javascript-group-capstone-project
 ```
+
+Generating your own key
+
+> Navigate to scrc/app.js and paste 📋 the following function:
+
+```
+import getKey from './modules/getkey.js';
+getKey();
+```
+
+> check you console in the browser the key is returned as an error in the format: `u06lzZuHDEVnvjfd4K1F`
+> Run Webpack
+
+```
+$ npm init -y
+```
+
+Open in Browser
+
+```
+$ npm run start #this will launch the webpack server
+```
+
+### Prerequisites
+
+In order to run this project you need:
+
+<!--
+Example command:
+
 Generating your own key
 > Navigate to scrc/app.js and paste 📋 the following function:
 ```
 import getKey from './modules/getkey.js';
 getKey();
 ```
+ -->
+
+### Setup
+
+Clone this repository to your desired folder:
+
+<!--
+Example commands:
+
 >check you console in the browser the key is returned as an error in the format: `u06lzZuHDEVnvjfd4K1F`
 Run Webpack
 ```
 $ npm init -y
 ```
-Open in Browser
+--->
+
+### Install
+
+Install this project with:
+
+<!--
+Example command:
+
+```sh
+  cd javascript-group-capstone-project
+  $ npm install
 ```
-$ npm run start #this will launch the webpack server
+--->
+
+### Usage
+
+To run the project, execute the following command:
+
+<!--
+Example command:
+
+```sh
+  npm run start
 ```
+--->
+
+### Run tests
+
+To run tests, run the following command:
+
+<!--
+Example command:
+
+```sh
+ npm run test
+```
+--->
+
+### Deployment
+
+You can deploy this project using:
+
+<!--
+Example:
+
+```sh
+
+```
+ -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
 
 ### Prerequisites
 
@@ -235,9 +327,13 @@ Example:
 - LinkedIn: [mnayi-gideon](https://linkedin.com/in/mnayi-gideon)
 
 👤 **Zia Bakhteyari**
+
 - GitHub: [@zia123456](https://github.com/Zia123456)
 - Twitter: [@zia_bakhteyari](https://twitter.com/Zia_Bakhteyari)
 - LinkedIn: [Zia bakhteyari](https://www.linkedin.com/in/zia-bakhteyari-8b8a861a5/)edIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+*🎉Congratulations you're done*✨edIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 *🎉Congratulations you're done*✨
@@ -253,13 +349,22 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Akcnowledgement
+
 Thank you [@SimonGideon](https://github.com/SimonGideon) and [@zia123456](https://github.com/Zia123456) for preparing this set and also making it available in for everyone
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
 ## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._ <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
