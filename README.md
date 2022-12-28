@@ -104,7 +104,8 @@ After you're finished please remove all the comments and instructions!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HqkGS7-2b_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<img width="560" height="315" src="https://www.youtube.com/embed/HqkGS7-2b_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></img>
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 > Add a link to your deployed project.
