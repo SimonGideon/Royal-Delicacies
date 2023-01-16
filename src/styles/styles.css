@@ -14,6 +14,12 @@ body {
   margin: auto;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -140,6 +146,13 @@ footer {
 }
 
 @media (max-width: 475px) {
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
   .food-cards {
     display: flex;
     flex-direction: column;
@@ -161,7 +174,63 @@ footer {
   ul {
     gap: 1px;
   }
+
+  nav ul {
+    display: none;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    margin-bottom: 0;
+  }
+
+  #meals-content {
+    margin: 0 36px;
+    margin-bottom: 5rem;
+    margin-top: 5em;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+
+  nav span {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    color: #ff7433;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    left: 0;
+    top: 0;
+    margin-left: 3rem;
+  }
+
+  nav {
+    height: 3rem;
+    width: 100%;
+  }
+
+  #countfood {
+    float: right;
+    margin-right: 70px;
+    width: 5%;
+    text-align: center;
+  }
+
+  .popup-container {
+    margin-top: 5rem;
+  }
 }
+
+/* pop-up */
 
 .popup-main-container {
   width: 100%;
@@ -196,12 +265,10 @@ footer {
 .icon {
   width: 40px;
   height: 40px;
-  margin-left: 28%;
+  margin-left: 56%;
   margin-top: -30px;
   background-image: url(../images/cross.png);
   background-size: 40px 40px;
-  border: 1px solid black;
-  border-radius: 50%;
   position: fixed;
 }
 
