@@ -1,2 +1,4 @@
 # .gitignore
 **/node_modules
+.env
+apiKey.js
