@@ -25,10 +25,7 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Royal Delicacies</b></h3>
 
 </div>
 
@@ -103,8 +100,6 @@ After you're finished please remove all the comments and instructions!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-<img width="560" height="315" src="https://www.youtube.com/embed/HqkGS7-2b_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></img>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -283,41 +278,7 @@ Example command:
 ```
 --->
 
-### Usage
 
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  npm run start
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
- npm run test
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -368,10 +329,6 @@ Thank you [@SimonGideon](https://github.com/SimonGideon) and [@zia123456](https:
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._ <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
